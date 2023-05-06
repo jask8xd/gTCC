@@ -28,8 +28,9 @@ describe("useSearch hook", () => {
 
     expect(result.current.isLoading).toBe(true);
     // falta un re render para poder tener el valor de los eventos
-    // usualmente lo realizo con waitForNextUpdate que viene del hook
-    // import { renderHook } from "@testing-library/react-hooks";
+    // usualmente lo realizo con waitForNextUpdate que viene de renderHook de la libreria
+    // "@testing-library/react-hooks";
+    // intente con pero no anduvo, lo revisare mas adelante
     // await waitFor(() =>
     //   expect(result.current.events).toEqual(searchListEventsFromApiResponse)
     // );
