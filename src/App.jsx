@@ -1,11 +1,9 @@
 import { createRoot } from "react-dom/client";
-
+import { Search } from "./view/Search";
 const App = () => {
   return (
     <div>
-      <header>
-        <h1>Game time codechallenge</h1>
-      </header>
+      <Search />
     </div>
   );
 };
