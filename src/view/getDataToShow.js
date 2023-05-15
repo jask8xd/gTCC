@@ -1,21 +1,21 @@
 export const getDataToShow = (data) => {
-  const events = data?.events.slice(0, 3).map((event) => ({
-    id: event?.event?.id,
-    image: event?.performers?.[0]?.hero_image_url,
-    title: event?.event?.name,
-    subtitle: event?.venue?.name,
-  }));
-  const performers = data?.performers.slice(0, 3).map((performer) => ({
-    id: performer?.id,
-    image: performer?.hero_image_url,
-    title: performer?.name,
-    subtitle: performer?.category.toUpperCase(),
-  }));
-  const venues = data?.venues.slice(0, 3).map((venues) => ({
-    id: venues?.id,
-    image: venues?.image_url,
-    title: venues?.name,
-    subtitle: venues?.city,
-  }));
-  return events.concat(performers, venues);
+  const order = data?.display_groups.filter(
+    (d) => d.display_name !== "Top Result"
+  );
+  let events = [];
+  for (let i = 0; i < order.length; i++) {
+    const e = data?.[order[i].slug].slice(0, 3).map((event) => ({
+      id: event?.event?.id || event?.id,
+      image:
+        event?.performers?.[0]?.hero_image_url ||
+        event?.hero_image_url ||
+        event?.image_url,
+      title: event?.event?.name || event?.name,
+      subtitle:
+        event?.venue?.name || event?.category?.toUpperCase() || event?.city,
+    }));
+    events.push(e);
+  }
+
+  return events;
 };
