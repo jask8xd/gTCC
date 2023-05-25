@@ -14,7 +14,7 @@ export const getDataToShow = (data) => {
       subtitle:
         event?.venue?.name || event?.category?.toUpperCase() || event?.city,
     }));
-    events.push(e);
+    events = events.concat(e);
   }
 
   return events;

@@ -1,23 +1,5 @@
 export const searchListEventsFromApiResponse = [
   {
-    id: 1,
-    image: "image1.png",
-    title: "Event 1",
-    subtitle: "Venue 1",
-  },
-  {
-    id: 2,
-    image: "image2.png",
-    title: "Event 2",
-    subtitle: "Venue 2",
-  },
-  {
-    id: 3,
-    image: "image3.png",
-    title: "Event 3",
-    subtitle: "Venue 3",
-  },
-  {
     id: 4,
     image: "image1.png",
     title: "Performer 1",
@@ -52,5 +34,23 @@ export const searchListEventsFromApiResponse = [
     image: "image3.png",
     title: "Venue 3",
     subtitle: "City 3",
+  },
+  {
+    id: 1,
+    image: "image1.png",
+    title: "Event 1",
+    subtitle: "Venue 1",
+  },
+  {
+    id: 2,
+    image: "image2.png",
+    title: "Event 2",
+    subtitle: "Venue 2",
+  },
+  {
+    id: 3,
+    image: "image3.png",
+    title: "Event 3",
+    subtitle: "Venue 3",
   },
 ];

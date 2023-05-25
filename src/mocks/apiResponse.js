@@ -1,4 +1,10 @@
 export const apiResponse = {
+  display_groups: [
+    { display_name: "Top Result", slug: "top_pick", sort_order: 0 },
+    { display_name: "Performers", slug: "performers", sort_order: 1 },
+    { display_name: "Venues", slug: "venues", sort_order: 2 },
+    { display_name: "Events", slug: "events", sort_order: 3 },
+  ],
   events: [
     {
       event: { id: 1, name: "Event 1" },
